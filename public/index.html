@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+  <title><%= htmlWebpackPlugin.options.title %></title>
+  <style>
+      #root {
+          min-height: 860px !important;
+          min-width: 1360px !important;
+          background-color: rgb(5, 34, 64) !important;
+      }
+  </style>
+</head>
+<body>
+<div id="root" class="w-full mx0 my0 bg-transparent">
+  <div id="app"></div>
+</div>
+<script>
+  window.onload = () => {
+    const cont = document.getElementById("root");
+    cont.style.height = window.innerHeight + "px";
+
+    let timer;
+    window.addEventListener("resize", () => {
+      clearTimeout(timer);
+      timer = setTimeout(() => {
+        const cont = document.getElementById("root");
+        cont.style.height = window.innerHeight + "px";
+      }, 500);
+    });
+  };
+
+</script>
+</body>
+</html>
