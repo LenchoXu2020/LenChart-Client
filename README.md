@@ -1,4 +1,4 @@
-# vue-echarts2
+# chart-client
 
 ## Project setup
 ```
